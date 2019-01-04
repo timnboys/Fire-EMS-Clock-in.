@@ -75,17 +75,8 @@ function AddMenuVehicle(menu)
     	local Item = NativeUI.CreateItem("Clock in as a Fireman - Male", "")
     	Item.Activated = function(ParentMenu, SelectedItem)
     		--Do stuff
-    		clockIn_FIRE()
+    		giveFire()
 			drawNotification(text)
-    	end
-        menu:AddItem(Item)
-    end
-	for i = 1, 1, 1 do
-    	local Item = NativeUI.CreateItem("Get treated by a doctor.", "Heal your ped.")
-    	Item.Activated = function(ParentMenu, SelectedItem)
-    		--Do stuff
-    		healp()
-			drawNotification2("You have been healed!")
     	end
         menu:AddItem(Item)
     end
@@ -123,13 +114,6 @@ function giveFire()
 			SetPlayerModel(PlayerId(), model)
 			SetModelAsNoLongerNeeded(model)
 			GiveLoadout()
-end
-
-function healp()
-	local ped = GetPlayerPed(-1)
-	SetEntityHealth(ped, 200)
-	ClearPedBloodDamage(ped)
-	ClearPedWetness(ped)
 end
 
 local spawnLoadoutList = {  
