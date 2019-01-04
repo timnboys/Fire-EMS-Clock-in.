@@ -119,7 +119,7 @@ end
 local spawnLoadoutList = {  
     {0x34A67B97, 1},    -- Jerry Can
     {0x8BB05FD7, 1},    -- Flashlight
-    {0x678B81B1, 1},    -- Nightstick
+    {0xF9DCBF2D, 1},    -- Nightstick
     {0x060EC506, 9000},    -- Fire Extinguisher
     {0x3656C8C1, 1},    -- Stun Gun
 }
